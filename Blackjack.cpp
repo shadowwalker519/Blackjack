@@ -137,6 +137,7 @@ bool player_phase(int player_card[], int poker[])
 	mapping(deal(poker, player_card));
 	cout << "You have got ";
 	mapping(deal(poker, player_card));
+	cout << "The total points of your cards is " << sum(player_card) << '.' <<endl;
 	while (sum(player_card) <= 21.0)
 	{	
 		cout << "One more card? (Y/N)" << endl;
@@ -145,6 +146,7 @@ bool player_phase(int player_card[], int poker[])
 		{
 			cout << "You have got ";
 			mapping(deal(poker, player_card));
+			cout << "The total points of your cards is " << sum(player_card) << '.' <<endl;
 		}
 		else break;
 	}
@@ -162,17 +164,20 @@ bool computer_phase(int computer_card[], int poker[], int player_card[])
 	mapping(deal(poker, computer_card));
 	cout << "The AI has got ";
 	mapping(deal(poker, computer_card));
+	cout << "The total points of AI cards is " << sum(computer_card) << '.' <<endl;
 	while (sum(computer_card) <= 21.0)
 	{	
 		if (sum(computer_card) < sum(player_card)) 
 		{
 			cout << "The AI has got ";
 			mapping(deal(poker, computer_card));
+			cout << "The total points of AI cards is " << sum(computer_card) << '.' <<endl;
 		}
 		else if (sum(computer_card) == sum(player_card) && num(computer_card) <= num(player_card)) 
 		{
 			cout << "The AI has got ";
 			mapping(deal(poker, computer_card));
+			cout << "The total points of AI cards is " << sum(computer_card) << '.' <<endl;
 		}
 		else break;
 	}
