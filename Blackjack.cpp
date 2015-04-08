@@ -219,4 +219,5 @@ int main()
 		cout << "Continue?(Y/N)" << endl;
 		choice = input();
 	}
+	return 0;
 }
